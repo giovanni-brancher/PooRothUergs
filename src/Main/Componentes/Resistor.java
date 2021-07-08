@@ -1,24 +1,36 @@
 package Main.Componentes;
 
-import Enums.TipoResistor;
-
 public class Resistor extends Componente {
-    private TipoResistor tipoResistor;
-    private Float resistancia;
+    private String tipoResistor;
+    private Float resistencia;
 
-    public TipoResistor getTipoResistor() {
+    public Resistor(
+            Integer id, 
+            String descricao, 
+            Integer quantidade,
+            String tipoResistor,
+            Float resistencia
+    ) {
+        super.setId(id);
+        super.setDescricao(descricao);
+        super.setQuantidade(quantidade);
+        this.tipoResistor = tipoResistor;
+        this.resistencia = resistencia;
+    }
+    
+    public String getTipoResistor() {
         return tipoResistor;
     }
 
-    public void setTipoResistor(TipoResistor tipoResistor) {
+    public void setTipoResistor(String tipoResistor) {
         this.tipoResistor = tipoResistor;
     }
 
-    public Float getResistancia() {
-        return resistancia;
+    public Float getResistencia() {
+        return resistencia;
     }
 
-    public void setResistancia(Float resistancia) {
-        this.resistancia = resistancia;
+    public void setResistencia(Float resistencia) {
+        this.resistencia = resistencia;
     }
 }

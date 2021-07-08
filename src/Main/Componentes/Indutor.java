@@ -1,16 +1,28 @@
 package Main.Componentes;
 
-import Enums.TipoIndutor;
-
 public class Indutor extends Componente {
-    private TipoIndutor tipoIndutor;
+    private String tipoIndutor;
     private Float indutancia;
 
-    public TipoIndutor getTipoIndutor() {
+    public Indutor(
+            Integer id, 
+            String descricao, 
+            Integer quantidade,
+            String tipoIndutor,
+            Float indutancia
+    ) {
+        super.setId(id);
+        super.setDescricao(descricao);
+        super.setQuantidade(quantidade);
+        this.tipoIndutor = tipoIndutor;
+        this.indutancia = indutancia;
+    }
+    
+    public String getTipoIndutor() {
         return tipoIndutor;
     }
 
-    public void setTipoIndutor(TipoIndutor tipoIndutor) {
+    public void setTipoIndutor(String tipoIndutor) {
         this.tipoIndutor = tipoIndutor;
     }
 
